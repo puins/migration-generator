@@ -1,0 +1,35 @@
+{
+    "name": "puins/migration-generator",
+    "description": "generator migration files if you never use it",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "puins",
+            "email": "hnjumeng@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1",
+        "doctrine/dbal": "2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Puins\\MigrateGenerator\\": "src"
+        },
+        "files": []
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "Puins\\MigrateGenerator\\Provider\\ThinkphpMigrateGeneratorService"
+            ]
+        },
+        "laravel": {
+            "providers": [
+                "Puins\\MigrateGenerator\\Provider\\LaravelMigrateGeneratorServiceProvider"
+            ]
+        }
+    }
+}
